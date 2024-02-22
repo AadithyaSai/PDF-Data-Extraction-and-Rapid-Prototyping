@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pdf data extraction and rapid prototyping"
+version = "0.1.0"
+description = "Coding Assignment"
+authors = ["Aadithya Sai <aadithyas0610@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
