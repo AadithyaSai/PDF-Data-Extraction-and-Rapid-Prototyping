@@ -1,6 +1,6 @@
 # Project specific files
-output/
-
+media/pages/*
+media/csv/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block body %}
+<div class="row">
+  <div class="col-6">
+    <img
+      id="scannedpic"
+      class="img-fluid"
+      src="media/pages/{{ request.session.img }}"
+      alt="scanned pic"
+      srcset=""
+    />
+  </div>
+  <div class="col-6 col">
+    <p class="">OCR Data</p>
+    <p id="top">{{ request.session.top }}</p>
+    {{ request.session.table|json_script:"table_data" }}
+    <table id="table"></table>
+    <p id="bottom">{{ request.session.bottom }}</p>
+  </div>
+</div>
+
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  th {
+    font-weight: bold !important;
+  }
+</style>
+
+{% endblock body %} {% block js %}
+<script src="/static/result.js"></script>
+{% endblock %}
